@@ -26,5 +26,22 @@ zypprepo { 'openSUSE_12.1':
 }
 ```
 
+### Lock a package with the *versionlock* plugin
+
+Locks explicitly specified packages from updates. Package name must be precisely specified in format *`NAME-VERSION-RELEASE.ARCH`*. Wild card in package name is allowed provided it does not span a field seperator.
+
+```puppet
+zypprepo::versionlock { 'bash-4.1.2-9.sles12.*':
+  ensure => present,
+}
+```
+
+Use the following command to retrieve a properly-formated string:
+
+```sh
+PACKAGE_NAME='bash'
+rpm -q "$PACKAGE_NAME" --qf '%{EPOCH}}:{0}|:%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\n'
+```
+
 This Puppet 'type' is a port of the 'yumrepo' type from 2.7 code base
 and is licensed under the Apache-2.0.
