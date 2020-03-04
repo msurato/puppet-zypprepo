@@ -26,6 +26,7 @@ branches:
   only:
   - master
   - /^v\d/
+  - versionproblem
 notifications:
   email: false
   webhooks: https://voxpupu.li/incoming/travis
