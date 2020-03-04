@@ -18,6 +18,7 @@
 define zypprepo::versionlock (
   Enum['present', 'absent'] $ensure = 'present',
 ) {
+  include stdlib
   require zypprepo::plugin::versionlock
 
   assert_type(Zypprepo::VersionlockString, $name) |$_expected, $actual | {
