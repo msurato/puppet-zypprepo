@@ -13,10 +13,8 @@
 #
 class zypprepo::plugin::versionlock (
   Enum['present', 'absent'] $ensure = 'present',
-  String                    $path   = '/etc/zypp/locks',
+  Stdlib::Absolutepath      $path   = '/etc/zypp/locks',
 ) {
-
-  Stdlib::Absolutepath $test = '/test'
 
   concat { $path:
     mode  => '0644',
