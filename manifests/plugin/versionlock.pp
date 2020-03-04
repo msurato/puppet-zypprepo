@@ -12,8 +12,8 @@
 #   include zypprepo::plugin::versionlock
 #
 class zypprepo::plugin::versionlock (
-  Stdlib::Absolutepath      $path   = '/etc/zypp/locks',
   Enum['present', 'absent'] $ensure = 'present',
+  Stdlib::Absolutepath      $path   = '/etc/zypp/locks',
 ) {
 
   concat { $path:
