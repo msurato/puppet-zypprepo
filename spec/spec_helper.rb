@@ -28,10 +28,10 @@ if Dir.exist?(File.expand_path('../../lib', __FILE__))
   require 'coveralls'
   require 'simplecov'
   require 'simplecov-console'
-  SimpleCov.formatters = [
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
     SimpleCov::Formatter::HTMLFormatter,
     SimpleCov::Formatter::Console
-  ]
+  ])
   SimpleCov.start do
     track_files 'lib/**/*.rb'
     add_filter '/spec'
