@@ -16,6 +16,8 @@ class zypprepo::plugin::versionlock (
   String                    $path   = '/etc/zypp/locks',
 ) {
 
+  Stdlib::Absolutepath $test = '/test'
+
   concat { $path:
     mode  => '0644',
     owner => 'root',
