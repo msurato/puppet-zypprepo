@@ -40,7 +40,7 @@ Use the following command to retrieve a properly-formated string:
 
 ```sh
 PACKAGE_NAME='bash'
-rpm -q "$PACKAGE_NAME" --qf '%{EPOCH}}:{0}|:%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\n'
+rpm -q "$PACKAGE_NAME" --qf '%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\n'
 ```
 
 This Puppet 'type' is a port of the 'yumrepo' type from 2.7 code base
