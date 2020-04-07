@@ -24,6 +24,7 @@ group :development do
 end
 
 group :system_tests do
+  gem 'voxpupuli-acceptance',               :require => false
   gem 'winrm',                              :require => false
   if beaker_version = ENV['BEAKER_VERSION']
     gem 'beaker', *location_for(beaker_version)
