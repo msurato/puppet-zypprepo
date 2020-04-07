@@ -24,11 +24,11 @@ matrix:
     env: PUPPET_VERSION="~> 5.0" CHECK=build DEPLOY_TO_FORGE=yes
   - rvm: 2.5.3
     bundler_args: --without development release
-    env: BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=sles-12sp2-64 CHECK=beaker
+    env: BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=sles12-64 CHECK=beaker
     services: docker
   - rvm: 2.5.3
     bundler_args: --without development release
-    env: BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=sles-15-64 CHECK=beaker
+    env: BEAKER_PUPPET_COLLECTION=puppet6 BEAKER_setfile=sles15-64 CHECK=beaker
     services: docker
 branches:
   only:
